@@ -1,0 +1,89 @@
+.animation {
+  &__image {
+    clip-path: circle(36.2% at 50% 50%);
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.description {
+  text-align: center;
+  margin: 0 2rem;
+
+  &__main {
+    font-family: 'Sanchez', serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    animation: moveRight 1s ease-in-out both;
+  }
+
+  &__paragraph {
+    animation: moveLeft 1s ease-in-out both;
+  }
+}
+
+.projects {
+  text-align: center;
+}
+
+.feature {
+  a {
+    @include style-link-text;
+  }
+  &__item {
+    padding: 2.7rem;
+    background: linear-gradient(
+      to bottom right,
+      $color-primary-dark,
+      $color-primary-light
+    );
+    color: $color-secondary-dark;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: background 1s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(
+        to bottom right,
+        $color-primary-deep-dark,
+        $color-primary-dark
+      );
+      color: $color-secondary-light;
+    }
+  }
+}
+
+.socials {
+  background: $color-primary-dark;
+  font-size: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  &__item {
+    @include style-link-text;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: $color-secondary-light;
+    transition: bacground 0.4s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+    &:first-child {
+      font-size: 3rem;
+    }
+
+    &:hover {
+      color: $color-secondary-dark;
+      background: $color-primary-hover;
+    }
+  }
+}
+
+#watch {
+  display: none;
+}

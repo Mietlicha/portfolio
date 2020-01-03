@@ -1,0 +1,9 @@
+.footer {
+  text-align: center;
+  background-color: $color-primary-deep-dark;
+
+  &__paragraph {
+    padding: 1.5rem 2rem;
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin style-link-text {
+  text-decoration: none;
+  color: $color-secondary-light;
+  cursor: pointer;
+}
