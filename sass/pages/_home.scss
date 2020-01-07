@@ -11,6 +11,7 @@
     height: 45vw;
     border-radius: 50%;
     background: #fff;
+    background: url(../img/02.png) center/cover;
     box-shadow: 0 1rem 4rem rgba($color-primary-deep-dark, 0.5);
 
     @include respond(tab) {
@@ -24,24 +25,15 @@
 
 .header {
   grid-area: header;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  @include respond(tab) {
-    margin-top: 5rem;
-  }
+  margin-right: auto;
+  margin-left: auto;
 
   .description {
     text-align: center;
 
-    @include respond(tab) {
-      text-align: left;
-    }
-
     &__main {
-      font-family: 'Sanchez', serif;
-      font-size: 3.5rem;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 3.7rem;
       text-transform: uppercase;
       animation: moveRight 1s ease-in-out both;
       padding: 0 2rem;
@@ -49,28 +41,43 @@
       @include respond(tab) {
         padding: 0;
       }
+
+      @include respond(huge) {
+        font-size: 4rem;
+      }
     }
 
     &__paragraph {
       animation: moveLeft 1s ease-in-out both;
       padding: 0 2rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+      font-size: 1.3rem;
 
       @include respond(tab) {
         padding: 0;
+      }
+
+      @include respond(huge) {
+        font-size: 2rem;
       }
     }
   }
 
   #watch {
     display: none;
-    // position: fixed;
-    // top: 5rem;
-    // right: 5rem;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
     font-size: 3rem;
     font-weight: 100;
 
     @include respond(tab) {
       display: block;
+    }
+
+    @include respond(huge) {
+      right: 5rem;
     }
   }
 }
@@ -84,6 +91,10 @@ main {
   }
 
   .feature {
+    @include respond(huge) {
+      margin-top: 3rem;
+    }
+
     a {
       @include style-link-text;
     }

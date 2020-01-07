@@ -40,6 +40,7 @@ body {
   color: $color-secondary-light;
 
   .container {
+    // position: relative;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -54,11 +55,15 @@ body {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
       grid-template-areas:
-        'header header'
+        'header .'
         'main animation'
         'main animation'
         'main aside';
       margin-bottom: 5rem;
+    }
+
+    @include respond(huge) {
+      margin-bottom: 9rem;
     }
   }
 }
