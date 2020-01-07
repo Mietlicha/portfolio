@@ -1,89 +1,169 @@
 .animation {
-  &__image {
-    clip-path: circle(36.2% at 50% 50%);
+  grid-area: animation;
+
+  @include respond(tab) {
+    margin-top: 1rem;
   }
 
-  video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.description {
-  text-align: center;
-  margin: 0 2rem;
-
-  &__main {
-    font-family: 'Sanchez', serif;
-    font-size: 3rem;
-    text-transform: uppercase;
-    animation: moveRight 1s ease-in-out both;
-  }
-
-  &__paragraph {
-    animation: moveLeft 1s ease-in-out both;
-  }
-}
-
-.projects {
-  text-align: center;
-}
-
-.feature {
-  a {
-    @include style-link-text;
-  }
   &__item {
-    padding: 2.7rem;
-    background: linear-gradient(
-      to bottom right,
-      $color-primary-dark,
-      $color-primary-light
-    );
-    color: $color-secondary-dark;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    transition: background 1s ease-in-out;
+    margin: 0 auto;
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1rem 4rem rgba($color-primary-deep-dark, 0.5);
 
-    &:hover {
-      background: linear-gradient(
-        to bottom right,
-        $color-primary-deep-dark,
-        $color-primary-dark
-      );
-      color: $color-secondary-light;
+    @include respond(tab) {
+      width: 23vw;
+      height: 23vw;
+      max-width: 300px;
+      max-height: 300px;
     }
   }
 }
 
-.socials {
-  background: $color-primary-dark;
-  font-size: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 
-  &__item {
-    @include style-link-text;
-    text-align: center;
-    padding: 3rem 1rem;
-    color: $color-secondary-light;
-    transition: bacground 0.4s ease-in-out;
-    width: 100%;
-    height: 100%;
+  @include respond(tab) {
+    margin-top: 5rem;
+  }
 
-    &:first-child {
-      font-size: 3rem;
+  .description {
+    text-align: center;
+
+    @include respond(tab) {
+      text-align: left;
     }
 
-    &:hover {
-      color: $color-secondary-dark;
-      background: $color-primary-hover;
+    &__main {
+      font-family: 'Sanchez', serif;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      animation: moveRight 1s ease-in-out both;
+      padding: 0 2rem;
+
+      @include respond(tab) {
+        padding: 0;
+      }
+    }
+
+    &__paragraph {
+      animation: moveLeft 1s ease-in-out both;
+      padding: 0 2rem;
+
+      @include respond(tab) {
+        padding: 0;
+      }
+    }
+  }
+
+  #watch {
+    display: none;
+    // position: fixed;
+    // top: 5rem;
+    // right: 5rem;
+    font-size: 3rem;
+    font-weight: 100;
+
+    @include respond(tab) {
+      display: block;
     }
   }
 }
 
-#watch {
-  display: none;
+main {
+  grid-area: main;
+
+  .projects {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .feature {
+    a {
+      @include style-link-text;
+    }
+
+    &__item {
+      padding: 2.7rem;
+      background: linear-gradient(
+        to bottom right,
+        $color-primary-dark,
+        $color-primary-light
+      );
+      color: $color-secondary-light;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+
+      @include respond(tab) {
+        background: transparent;
+        padding: 1.5rem;
+        font-weight: 100;
+        font-size: 1rem;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        background: $color-primary-light;
+        color: $color-secondary-dark;
+
+        @include respond(tab) {
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+aside {
+  grid-area: aside;
+
+  .socials {
+    background: $color-primary-dark;
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab) {
+      background: transparent;
+      margin: 2rem auto;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    &__item {
+      @include style-link-text;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: $color-secondary-light;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+
+      @include respond(tab) {
+        padding: 1rem 2rem;
+      }
+
+      &:first-child i {
+        font-size: 2.8rem;
+      }
+
+      &:hover {
+        color: $color-secondary-dark;
+        background: $color-primary-hover;
+
+        @include respond(tab) {
+          color: $color-secondary-dark;
+          background: transparent;
+        }
+      }
+    }
+  }
 }

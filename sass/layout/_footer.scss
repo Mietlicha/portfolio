@@ -1,6 +1,13 @@
 .footer {
   text-align: center;
   background-color: $color-primary-deep-dark;
+  width: 100%;
+
+  @include respond(huge) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
 
   &__paragraph {
     padding: 1.5rem 2rem;
