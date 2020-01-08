@@ -2,7 +2,11 @@
   grid-area: animation;
 
   @include respond(tab) {
-    margin-top: 1rem;
+    margin-top: 3rem;
+  }
+
+  @include respond(huge) {
+    margin-top: 5rem;
   }
 
   &__item {
@@ -28,8 +32,16 @@
   margin-right: auto;
   margin-left: auto;
 
+  @include respond(tab) {
+    width: 80%;
+  }
+
   .description {
     text-align: center;
+
+    @include respond(tab) {
+      text-align: left;
+    }
 
     &__main {
       font-family: 'Roboto Mono', monospace;

@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -40,7 +41,6 @@ body {
   color: $color-secondary-light;
 
   .container {
-    // position: relative;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -55,7 +55,7 @@ body {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
       grid-template-areas:
-        'header .'
+        'header header'
         'main animation'
         'main animation'
         'main aside';
@@ -65,5 +65,35 @@ body {
     @include respond(huge) {
       margin-bottom: 9rem;
     }
+  }
+}
+
+.background,
+.backgrund-huge {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.background {
+  top: -15rem;
+  left: -5rem;
+  background: url(../img/1a.png) no-repeat;
+
+  @include respond(tab) {
+    top: 0rem;
+    left: 0rem;
+  }
+}
+
+.backgrund-huge {
+  bottom: -5rem;
+  right: -42rem;
+  background: url(../img/1.png) no-repeat;
+  display: none;
+
+  @include respond(huge) {
+    display: block;
   }
 }

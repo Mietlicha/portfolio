@@ -52,6 +52,7 @@ html {
       font-size: 100%; } }
 
 body {
+  position: relative;
   font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -67,11 +68,36 @@ body {
       body .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
-        grid-template-areas: 'header .' 'main animation' 'main animation' 'main aside';
+        grid-template-areas: 'header header' 'main animation' 'main animation' 'main aside';
         margin-bottom: 5rem; } }
     @media only screen and (min-width: 1500px) {
       body .container {
         margin-bottom: 9rem; } }
+
+.background,
+.backgrund-huge {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; }
+
+.background {
+  top: -15rem;
+  left: -5rem;
+  background: url(../img/1a.png) no-repeat; }
+  @media only screen and (min-width: 900px) {
+    .background {
+      top: 0rem;
+      left: 0rem; } }
+
+.backgrund-huge {
+  bottom: -5rem;
+  right: -42rem;
+  background: url(../img/1.png) no-repeat;
+  display: none; }
+  @media only screen and (min-width: 1500px) {
+    .backgrund-huge {
+      display: block; } }
 
 .footer {
   text-align: center;
@@ -135,7 +161,10 @@ body {
   grid-area: animation; }
   @media only screen and (min-width: 900px) {
     .animation {
-      margin-top: 1rem; } }
+      margin-top: 3rem; } }
+  @media only screen and (min-width: 1500px) {
+    .animation {
+      margin-top: 5rem; } }
   .animation__item {
     margin: 0 auto;
     width: 45vw;
@@ -155,8 +184,14 @@ body {
   grid-area: header;
   margin-right: auto;
   margin-left: auto; }
+  @media only screen and (min-width: 900px) {
+    .header {
+      width: 80%; } }
   .header .description {
     text-align: center; }
+    @media only screen and (min-width: 900px) {
+      .header .description {
+        text-align: left; } }
     .header .description__main {
       font-family: 'Roboto Mono', monospace;
       font-size: 3.7rem;
