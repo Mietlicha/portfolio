@@ -24,6 +24,10 @@ html {
   }
 
   @include respond(big-desktop) {
+    font-size: 90%;
+  }
+
+  @include respond(huge) {
     font-size: 100%;
   }
 }
@@ -34,11 +38,13 @@ body {
   font-weight: 400;
   line-height: 1.6;
   background: linear-gradient(
-    to bottom right,
-    $color-primary-dark,
-    $color-primary-light
-  );
+      to bottom right,
+      $color-primary-dark,
+      $color-primary-light
+    )
+    no-repeat center/cover;
   color: $color-secondary-light;
+  overflow-x: hidden;
 
   .container {
     max-width: 1200px;
@@ -59,11 +65,9 @@ body {
         'main animation'
         'main animation'
         'main aside';
-      margin-bottom: 5rem;
-    }
-
-    @include respond(huge) {
-      margin-bottom: 9rem;
+      padding-bottom: 5rem;
+      max-height: 900px;
+      height: 88vh;
     }
   }
 }
@@ -74,12 +78,11 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  overflow: none;
 }
 
 .background {
-  top: -15rem;
-  left: -5rem;
-  background: url(../img/1a.png) no-repeat;
+  background: url(../img/1a.png) no-repeat center/cover;
 
   @include respond(tab) {
     top: 0rem;
@@ -88,9 +91,9 @@ body {
 }
 
 .backgrund-huge {
-  bottom: -5rem;
-  right: -42rem;
-  background: url(../img/1.png) no-repeat;
+  top: 0rem;
+  right: -45rem;
+  background: url(../img/1.png) no-repeat center/cover;
   display: none;
 
   @include respond(huge) {

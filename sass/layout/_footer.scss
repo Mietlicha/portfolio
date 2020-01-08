@@ -2,11 +2,15 @@
   text-align: center;
   background-color: $color-primary-deep-dark;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @include respond(huge) {
-    position: fixed;
+  @include respond(tab) {
+    // position: fixed;
     bottom: 0;
     left: 0;
+    height: 12vh;
   }
 
   &__paragraph {

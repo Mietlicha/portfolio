@@ -1,6 +1,10 @@
 .margin-top-big {
   margin-top: 3rem;
 
+  @include respond(big-desktop) {
+    margin-top: 2.5;
+  }
+
   @include respond(huge) {
     margin-top: 6.5rem;
   }

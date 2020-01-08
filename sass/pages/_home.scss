@@ -2,11 +2,15 @@
   grid-area: animation;
 
   @include respond(tab) {
-    margin-top: 3rem;
+    margin-top: 0;
+  }
+
+  @include respond(big-screen) {
+    margin-top: 2rem;
   }
 
   @include respond(huge) {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 
   &__item {

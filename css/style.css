@@ -49,6 +49,9 @@ html {
       font-size: 85%; } }
   @media only screen and (min-width: 1200px) {
     html {
+      font-size: 90%; } }
+  @media only screen and (min-width: 1500px) {
+    html {
       font-size: 100%; } }
 
 body {
@@ -56,8 +59,9 @@ body {
   font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to bottom right, #464159, #6c7b95);
-  color: #e9fcf2; }
+  background: linear-gradient(to bottom right, #464159, #6c7b95) no-repeat center/cover;
+  color: #e9fcf2;
+  overflow-x: hidden; }
   body .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -69,31 +73,29 @@ body {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
         grid-template-areas: 'header header' 'main animation' 'main animation' 'main aside';
-        margin-bottom: 5rem; } }
-    @media only screen and (min-width: 1500px) {
-      body .container {
-        margin-bottom: 9rem; } }
+        padding-bottom: 5rem;
+        max-height: 900px;
+        height: 88vh; } }
 
 .background,
 .backgrund-huge {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  z-index: -1; }
+  z-index: -1;
+  overflow: none; }
 
 .background {
-  top: -15rem;
-  left: -5rem;
-  background: url(../img/1a.png) no-repeat; }
+  background: url(../img/1a.png) no-repeat center/cover; }
   @media only screen and (min-width: 900px) {
     .background {
       top: 0rem;
       left: 0rem; } }
 
 .backgrund-huge {
-  bottom: -5rem;
-  right: -42rem;
-  background: url(../img/1.png) no-repeat;
+  top: 0rem;
+  right: -45rem;
+  background: url(../img/1.png) no-repeat center/cover;
   display: none; }
   @media only screen and (min-width: 1500px) {
     .backgrund-huge {
@@ -102,18 +104,24 @@ body {
 .footer {
   text-align: center;
   background-color: #2d2b3a;
-  width: 100%; }
-  @media only screen and (min-width: 1500px) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (min-width: 900px) {
     .footer {
-      position: fixed;
       bottom: 0;
-      left: 0; } }
+      left: 0;
+      height: 12vh; } }
   .footer__paragraph {
     padding: 1.5rem 2rem;
     opacity: 0.3; }
 
 .margin-top-big {
   margin-top: 3rem; }
+  @media only screen and (min-width: 1200px) {
+    .margin-top-big {
+      margin-top: 2.5; } }
   @media only screen and (min-width: 1500px) {
     .margin-top-big {
       margin-top: 6.5rem; } }
@@ -161,10 +169,10 @@ body {
   grid-area: animation; }
   @media only screen and (min-width: 900px) {
     .animation {
-      margin-top: 3rem; } }
+      margin-top: 0; } }
   @media only screen and (min-width: 1500px) {
     .animation {
-      margin-top: 5rem; } }
+      margin-top: 4rem; } }
   .animation__item {
     margin: 0 auto;
     width: 45vw;
