@@ -41,31 +41,97 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (min-width: 600px) {
+    html {
+      font-size: 80%; } }
+  @media only screen and (min-width: 900px) {
+    html {
+      font-size: 85%; } }
+  @media only screen and (min-width: 1200px) {
+    html {
+      font-size: 90%; } }
+  @media only screen and (min-width: 1500px) {
+    html {
+      font-size: 100%; } }
 
 body {
+  position: relative;
   font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to bottom right, #464159, #6c7b95);
+  background: linear-gradient(to bottom right, #464159, #6c7b95) no-repeat center/cover;
   color: #e9fcf2;
-  width: 100vw; }
+  overflow-x: hidden; }
+  body .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'animation' 'header' 'main' 'aside'; }
+    @media only screen and (min-width: 900px) {
+      body .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-areas: 'header header' 'main animation' 'main animation' 'main aside';
+        padding-bottom: 5rem;
+        max-height: 900px;
+        height: 88vh; } }
+
+.background,
+.backgrund-huge {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: none; }
+
+.background {
+  background: url(../img/1a.png) no-repeat center/cover; }
+  @media only screen and (min-width: 900px) {
+    .background {
+      top: 0rem;
+      left: 0rem; } }
+
+.backgrund-huge {
+  top: 0rem;
+  right: -45rem;
+  background: url(../img/1.png) no-repeat center/cover;
+  display: none; }
+  @media only screen and (min-width: 1500px) {
+    .backgrund-huge {
+      display: block; } }
 
 .footer {
   text-align: center;
-  background-color: #2d2b3a; }
+  background-color: #2d2b3a;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (min-width: 900px) {
+    .footer {
+      bottom: 0;
+      left: 0;
+      height: 12vh; } }
   .footer__paragraph {
     padding: 1.5rem 2rem;
     opacity: 0.3; }
 
 .margin-top-big {
-  margin-top: 5rem; }
+  margin-top: 3rem; }
+  @media only screen and (min-width: 1200px) {
+    .margin-top-big {
+      margin-top: 2.5; } }
+  @media only screen and (min-width: 1500px) {
+    .margin-top-big {
+      margin-top: 6.5rem; } }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   color: #e9fcf2;
   cursor: pointer;
-  padding: 1.5rem 4rem;
+  padding: 2rem 3.7rem;
   display: inline-block;
   border-radius: 10rem;
   border: 1px solid #e9fcf2;
@@ -99,65 +165,146 @@ body {
 .btn--animation {
   animation: movetop 0.5s 0.75s ease-out both; }
 
-.animation__image {
-  clip-path: circle(36.2% at 50% 50%); }
+.animation {
+  grid-area: animation; }
+  @media only screen and (min-width: 900px) {
+    .animation {
+      margin-top: 0; } }
+  @media only screen and (min-width: 1500px) {
+    .animation {
+      margin-top: 4rem; } }
+  .animation__item {
+    margin: 0 auto;
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    background: #fff;
+    background: url(../img/02.png) center/cover;
+    box-shadow: 0 1rem 4rem rgba(45, 43, 58, 0.5); }
+    @media only screen and (min-width: 900px) {
+      .animation__item {
+        width: 23vw;
+        height: 23vw;
+        max-width: 300px;
+        max-height: 300px; } }
 
-.animation video {
-  width: 100%;
-  height: auto; }
-
-.description {
-  text-align: center;
-  margin: 0 2rem; }
-  .description__main {
-    font-family: 'Sanchez', serif;
+.header {
+  grid-area: header;
+  margin-right: auto;
+  margin-left: auto; }
+  @media only screen and (min-width: 900px) {
+    .header {
+      width: 80%; } }
+  .header .description {
+    text-align: center; }
+    @media only screen and (min-width: 900px) {
+      .header .description {
+        text-align: left; } }
+    .header .description__main {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 3.7rem;
+      text-transform: uppercase;
+      animation: moveRight 1s ease-in-out both;
+      padding: 0 2rem; }
+      @media only screen and (min-width: 900px) {
+        .header .description__main {
+          padding: 0; } }
+      @media only screen and (min-width: 1500px) {
+        .header .description__main {
+          font-size: 4rem; } }
+    .header .description__paragraph {
+      animation: moveLeft 1s ease-in-out both;
+      padding: 0 2rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+      font-size: 1.3rem; }
+      @media only screen and (min-width: 900px) {
+        .header .description__paragraph {
+          padding: 0; } }
+      @media only screen and (min-width: 1500px) {
+        .header .description__paragraph {
+          font-size: 2rem; } }
+  .header #watch {
+    display: none;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
     font-size: 3rem;
-    text-transform: uppercase;
-    animation: moveRight 1s ease-in-out both; }
-  .description__paragraph {
-    animation: moveLeft 1s ease-in-out both; }
+    font-weight: 100; }
+    @media only screen and (min-width: 900px) {
+      .header #watch {
+        display: block; } }
+    @media only screen and (min-width: 1500px) {
+      .header #watch {
+        right: 5rem; } }
 
-.projects {
-  text-align: center; }
-
-.feature a {
-  text-decoration: none;
-  color: #e9fcf2;
-  cursor: pointer; }
-
-.feature__item {
-  padding: 2.7rem;
-  background: linear-gradient(to bottom right, #464159, #6c7b95);
-  color: #8bbabb;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  transition: background 1s ease-in-out; }
-  .feature__item:hover {
-    background: linear-gradient(to bottom right, #2d2b3a, #464159);
-    color: #e9fcf2; }
-
-.socials {
-  background: #464159;
-  font-size: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center; }
-  .socials__item {
+main {
+  grid-area: main; }
+  main .projects {
+    text-align: center;
+    font-size: 1.4rem; }
+  @media only screen and (min-width: 1500px) {
+    main .feature {
+      margin-top: 3rem; } }
+  main .feature a {
     text-decoration: none;
     color: #e9fcf2;
-    cursor: pointer;
-    text-align: center;
-    padding: 3rem 1rem;
+    cursor: pointer; }
+  main .feature__item {
+    padding: 2.7rem;
+    background: linear-gradient(to bottom right, #464159, #6c7b95);
     color: #e9fcf2;
-    transition: bacground 0.4s ease-in-out;
-    width: 100%;
-    height: 100%; }
-    .socials__item:first-child {
-      font-size: 3rem; }
-    .socials__item:hover {
-      color: #8bbabb;
-      background: #56506d; }
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out; }
+    @media only screen and (min-width: 900px) {
+      main .feature__item {
+        background: transparent;
+        padding: 1.5rem;
+        font-weight: 100;
+        font-size: 1rem;
+        width: 50%;
+        margin: 0 auto; } }
+    main .feature__item:hover {
+      background: #6c7b95;
+      color: #8df1f5; }
+      @media only screen and (min-width: 900px) {
+        main .feature__item:hover {
+          border-radius: 6px; } }
 
-#watch {
-  display: none; }
+aside {
+  grid-area: aside; }
+  aside .socials {
+    background: #464159;
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (min-width: 900px) {
+      aside .socials {
+        background: transparent;
+        margin: 2rem auto;
+        width: 50%;
+        margin: 0 auto; } }
+    aside .socials__item {
+      text-decoration: none;
+      color: #e9fcf2;
+      cursor: pointer;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: #e9fcf2;
+      transition: all 0.2s ease-in-out;
+      width: 100%; }
+      @media only screen and (min-width: 900px) {
+        aside .socials__item {
+          padding: 1rem 2rem; } }
+      aside .socials__item:first-child i {
+        font-size: 2.8rem; }
+      aside .socials__item:hover {
+        color: #8df1f5;
+        background: #56506d; }
+        @media only screen and (min-width: 900px) {
+          aside .socials__item:hover {
+            color: #8df1f5;
+            background: transparent; } }
