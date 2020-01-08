@@ -42,3 +42,15 @@
     transform: translateX(0);
   }
 }
+
+@keyframes site-header {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(2.5);
+    font-weight: 900;
+    opacity: 0;
+  }
+}

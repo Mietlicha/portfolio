@@ -1,0 +1,113 @@
+.about-container {
+  padding: 6rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include respond(tab) {
+    padding: 3rem;
+    height: 88vh;
+    text-align: left;
+  }
+
+  @include respond(huge) {
+    padding: 5rem;
+    height: 88vh;
+    text-align: left;
+  }
+}
+
+.about-main {
+  margin-top: 3rem;
+
+  @include respond(tab) {
+    margin-top: 1rem;
+    display: flex;
+    padding-left: 5rem;
+  }
+
+  &__short {
+    text-transform: uppercase;
+    list-style: none;
+    padding-right: 1rem;
+    font-size: 1.7rem;
+    line-height: 200%;
+    font-weight: 300;
+    display: none;
+
+    li {
+      text-align: right;
+      color: $color-secondary-dark;
+    }
+
+    @include respond(tab) {
+      display: block;
+    }
+  }
+
+  &__description {
+    padding: 0 3rem;
+
+    @include respond(tab) {
+      border-left: 0.3rem solid rgba($color-secondary-light, 0.4);
+    }
+
+    span {
+      display: none;
+
+      @include respond(phone) {
+        display: inline;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: -1rem;
+    font-size: 3rem;
+  }
+
+  &__para {
+    font-size: 1.2rem;
+    line-height: 200%;
+    text-align: justify;
+    margin-bottom: 1rem;
+
+    @include respond(tab) {
+      font-size: 1rem;
+    }
+
+    &:first-of-type {
+      text-indent: 3rem;
+    }
+  }
+}
+
+.about-aside {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 3rem;
+
+  @include respond(tab) {
+    margin-top: 2rem;
+  }
+
+  @include respond(huge) {
+    margin-top: 4rem;
+  }
+
+  &__item {
+    width: 3.5vw;
+    height: 3.5vw;
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 2rem;
+    margin: 1rem;
+    border: 2px solid $color-secondary-light;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
