@@ -1,13 +1,26 @@
 .about-container {
-  padding: 6rem 2.5rem;
+  padding: 6rem 0 0 0;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'site-header'
+    'about-main'
+    'about-aside'
+    'nav';
 
   @include respond(tab) {
     padding: 3rem;
     height: 88vh;
     text-align: left;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-areas:
+      'site-header site-header'
+      'nav about-main'
+      'about-aside about-aside';
   }
 
   @include respond(huge) {
@@ -18,31 +31,12 @@
 }
 
 .about-main {
+  grid-area: about-main;
   margin-top: 3rem;
 
   @include respond(tab) {
     margin-top: 1rem;
     display: flex;
-    padding-left: 5rem;
-  }
-
-  &__short {
-    text-transform: uppercase;
-    list-style: none;
-    padding-right: 1rem;
-    font-size: 1.7rem;
-    line-height: 200%;
-    font-weight: 300;
-    display: none;
-
-    li {
-      text-align: right;
-      color: $color-secondary-dark;
-    }
-
-    @include respond(tab) {
-      display: block;
-    }
   }
 
   &__description {
@@ -83,18 +77,16 @@
 }
 
 .about-aside {
-  margin-top: 4rem;
+  grid-area: about-aside;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 3rem;
+  align-items: center;
+  padding: 1rem 3rem;
 
   @include respond(tab) {
-    margin-top: 2rem;
-  }
-
-  @include respond(huge) {
-    margin-top: 4rem;
+    margin-top: 0;
+    padding: 0 3rem;
   }
 
   &__item {

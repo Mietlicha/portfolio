@@ -37,12 +37,10 @@ body {
   font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(
-      to bottom right,
-      $color-primary-dark,
-      $color-primary-light
-    )
-    no-repeat center/cover;
+  background: url(../img/1a.png) no-repeat center/cover,
+    linear-gradient(to bottom right, $color-primary-dark, $color-primary-light)
+      no-repeat center/cover,
+    red;
   color: $color-secondary-light;
   overflow-x: hidden;
 
@@ -52,9 +50,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      'animation'
-      'header'
       'main'
+      'header'
+      'nav'
       'aside';
 
     @include respond(tab) {
@@ -62,9 +60,9 @@ body {
       grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
       grid-template-areas:
         'header header'
-        'main animation'
-        'main animation'
-        'main aside';
+        'nav main'
+        'nav main'
+        'nav aside';
       padding-bottom: 5rem;
       max-height: 900px;
       height: 88vh;
@@ -72,25 +70,11 @@ body {
   }
 }
 
-.background,
 .backgrund-huge {
   position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  overflow: none;
-}
-
-.background {
-  background: url(../img/1a.png) no-repeat center/cover;
-
-  @include respond(tab) {
-    top: 0rem;
-    left: 0rem;
-  }
-}
-
-.backgrund-huge {
   top: 0rem;
   right: -45rem;
   background: url(../img/1.png) no-repeat center/cover;
