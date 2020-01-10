@@ -1,22 +1,39 @@
-.animation {
-  grid-area: main;
+.home-container {
+  grid-template-areas:
+    'animation'
+    'header'
+    'main'
+    'nav'
+    'aside';
 
   @include respond(tab) {
-    margin-top: 0;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      'header header'
+      'main animation'
+      'nav animation'
+      'aside animation';
   }
+}
 
-  @include respond(big-screen) {
-    margin-top: 2rem;
-  }
+.animation {
+  grid-area: animation;
+  padding: 6rem;
 
-  @include respond(huge) {
-    margin-top: 4rem;
+  @include respond(tab) {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4rem;
   }
 
   &__item {
     margin: 0 auto;
     width: 45vw;
     height: 45vw;
+    max-width: 320px;
+    max-height: 320px;
     border-radius: 50%;
     background: #fff;
     background: url(../img/02.png) center/cover;
@@ -25,8 +42,6 @@
     @include respond(tab) {
       width: 23vw;
       height: 23vw;
-      max-width: 300px;
-      max-height: 300px;
     }
   }
 }
@@ -35,9 +50,17 @@
   grid-area: header;
   margin-right: auto;
   margin-left: auto;
+  padding: 3rem 1rem;
+  overflow: hidden;
 
   @include respond(tab) {
-    width: 80%;
+    padding: 2rem 5rem;
+    margin-left: 0;
+  }
+
+  @include respond(huge) {
+    padding: 3rem 8rem;
+    margin-left: 0;
   }
 
   .description {
@@ -52,31 +75,21 @@
       font-size: 3.7rem;
       text-transform: uppercase;
       animation: moveRight 1s ease-in-out both;
-      padding: 0 2rem;
       color: $color-secondary-dark;
 
       @include respond(tab) {
-        padding: 0;
-      }
-
-      @include respond(huge) {
         font-size: 4rem;
       }
     }
 
     &__paragraph {
       animation: moveLeft 1s ease-in-out both;
-      padding: 0 2rem;
       font-weight: 100;
       letter-spacing: 5px;
       font-size: 1.3rem;
 
       @include respond(tab) {
-        padding: 0;
-      }
-
-      @include respond(huge) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -99,8 +112,29 @@
   }
 }
 
+.projects {
+  grid-area: main;
+  padding: 5rem;
+  font-size: 2rem;
+
+  @include respond(tab) {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  @include respond(huge) {
+    padding: 2rem;
+  }
+}
+
 aside {
   grid-area: aside;
+  height: 100%;
+
+  @include respond(tab) {
+    width: 55%;
+    margin: 0 AUTO;
+  }
 
   .socials {
     background: $color-primary-dark;
@@ -111,9 +145,6 @@ aside {
 
     @include respond(tab) {
       background: transparent;
-      margin: 2rem auto;
-      width: 50%;
-      margin: 0 auto;
     }
 
     &__item {
@@ -123,10 +154,6 @@ aside {
       color: $color-secondary-light;
       transition: all 0.2s ease-in-out;
       width: 100%;
-
-      @include respond(tab) {
-        padding: 1rem 2rem;
-      }
 
       &:first-child i {
         font-size: 2.8rem;

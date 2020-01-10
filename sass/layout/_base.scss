@@ -7,16 +7,21 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  // border: 1px solid yellow;
+}
+
+::selection {
+  background: $color-primary-light;
+  color: $color-secondary-light;
 }
 
 html {
   //this defines what 1rem is. 1rem=10px    10px/16px = 62.5%
   font-size: 62.5%;
   box-sizing: border-box;
+  height: 100%;
 
   @include respond(phone) {
-    font-size: 80%;
+    font-size: 70%;
   }
 
   @include respond(tab) {
@@ -33,54 +38,54 @@ html {
 }
 
 body {
-  position: relative;
+  min-height: 100%;
   font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   background: url(../img/1a.png) no-repeat center/cover,
     linear-gradient(to bottom right, $color-primary-dark, $color-primary-light)
-      no-repeat center/cover,
-    red;
+      no-repeat center/cover;
   color: $color-secondary-light;
-  overflow-x: hidden;
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'main'
-      'header'
-      'nav'
-      'aside';
+  @include respond(tab) {
+    height: 100%;
+  }
 
-    @include respond(tab) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
-      grid-template-areas:
-        'header header'
-        'nav main'
-        'nav main'
-        'nav aside';
-      padding-bottom: 5rem;
-      max-height: 900px;
-      height: 88vh;
-    }
+  @include respond(huge) {
+    background: url(../img/1a.png) no-repeat center/cover,
+      url(../img/1.png) no-repeat 110% 50% / contain,
+      linear-gradient(
+          to bottom right,
+          $color-primary-dark,
+          $color-primary-light
+        )
+        no-repeat center/cover;
   }
 }
 
-.backgrund-huge {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  top: 0rem;
-  right: -45rem;
-  background: url(../img/1.png) no-repeat center/cover;
-  display: none;
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @include respond(huge) {
-    display: block;
+  @include respond(tab) {
+    min-height: 90%;
+  }
+}
+
+.container {
+  overflow: auto;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include respond(tab) {
+    height: 100%;
+    max-width: 1200px;
+    max-height: 800px;
   }
 }

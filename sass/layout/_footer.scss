@@ -1,20 +1,22 @@
 .footer {
+  height: 10%;
   text-align: center;
   background-color: $color-primary-deep-dark;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  clear: both;
+  padding: 1.5rem 2rem;
 
   @include respond(tab) {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
-    // height: 12vh;
   }
 
   &__paragraph {
-    padding: 1.5rem 2rem;
     opacity: 0.3;
   }
 }
