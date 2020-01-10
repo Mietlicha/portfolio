@@ -54,7 +54,6 @@
   grid-area: site-header;
   font-size: 2rem;
   text-transform: uppercase;
-  color: $color-secondary-dark;
   letter-spacing: 0.5rem;
   overflow: hidden;
   padding: 6rem 2rem 2rem 2rem;
@@ -63,8 +62,13 @@
     padding: 1rem 3rem;
   }
 
-  @include respond(huge) {
-    padding: 3rem;
+  a {
+    @include style-link-text;
+    color: $color-secondary-dark;
+
+    &:hover {
+      color: darken($color-secondary-dark, 10%);
+    }
   }
 
   &__main {

@@ -36,6 +36,11 @@
         display: inline;
       }
     }
+
+    strong {
+      letter-spacing: 2px;
+      color: lighten($color-secondary-dark, 15%);
+    }
   }
 
   &__title {
@@ -89,13 +94,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    transition: all 0.4s ease-in-out;
+    position: relative;
 
-  .desktop-only {
-    display: none;
-
-    @include respond(tab) {
-      display: block;
+    &:hover {
+      color: $color-secondary-dark;
+      border: 2px solid $color-secondary-dark;
     }
   }
 }
