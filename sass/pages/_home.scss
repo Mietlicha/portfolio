@@ -114,7 +114,7 @@
 
 .projects {
   grid-area: main;
-  padding: 5rem;
+  padding: 3rem;
   font-size: 2rem;
 
   @include respond(tab) {

@@ -4,12 +4,16 @@
   &:visited {
     @include style-link-text;
     text-transform: uppercase;
-    padding: 2rem 3.7rem;
+    padding: 2rem;
     display: inline-block;
     border-radius: 10rem;
     border: 1px solid $color-secondary-light;
     transition: transform 0.2s ease-in;
     position: relative;
+
+    @include respond(tab) {
+      padding: 2rem 3.5rem;
+    }
 
     &:hover {
       transform: translateY(-3px);

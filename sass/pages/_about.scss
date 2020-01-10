@@ -65,14 +65,13 @@
 }
 
 .about-aside {
-  // background: royalblue;
   grid-area: about-aside;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 3.5rem;
+  padding: 1rem 3.5rem 3.5rem 3.5rem;
 
   @include respond(tab) {
     padding: 0.5rem 3rem;
