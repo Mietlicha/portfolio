@@ -229,14 +229,16 @@ body {
           padding: 1rem 2.7rem; } }
     .nav__item:hover {
       background: #6c7b95;
-      color: #e9fcf2; }
+      color: #e9fcf2;
+      box-shadow: 0 2rem 3rem #464159; }
       @media only screen and (min-width: 900px) {
         .nav__item:hover {
           border-radius: 6px; } }
 
 @media only screen and (min-width: 900px) {
   .nav-pages .nav__item {
-    width: 100%; } }
+    width: 100%;
+    position: relative; } }
 
 @media only screen and (min-width: 900px) {
   .nav-pages .nav__item a {
@@ -244,6 +246,34 @@ body {
     padding-right: 2rem;
     text-align: right;
     line-height: 300%; } }
+
+@media only screen and (min-width: 900px) {
+  .nav-pages .nav__item::before {
+    content: '';
+    background: #6c7b95;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s ease-in-out; } }
+
+@media only screen and (min-width: 900px) {
+  .nav-pages .nav__item:hover {
+    border-radius: 0;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none; } }
+
+@media only screen and (min-width: 900px) {
+  .nav-pages .nav__item:hover a {
+    padding-right: 4rem; } }
+
+@media only screen and (min-width: 900px) {
+  .nav-pages .nav__item:hover::before {
+    width: 60%;
+    box-shadow: 0 2rem 3rem #464159; } }
 
 .about-container {
   grid-template-areas: 'site-header' 'about-main' 'about-aside' 'nav'; }
