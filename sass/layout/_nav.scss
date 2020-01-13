@@ -63,6 +63,7 @@
         padding-right: 2rem;
         text-align: right;
         line-height: 300%;
+        transition: transform 0.3s ease-in-out;
       }
     }
 
@@ -84,14 +85,13 @@
       @include respond(tab) {
         border-radius: 0;
         background: transparent;
-        transition: all 0.3s ease-in-out;
         box-shadow: none;
       }
     }
 
     &:hover a {
       @include respond(tab) {
-        padding-right: 4rem;
+        transform: translateX(-1rem);
       }
     }
 

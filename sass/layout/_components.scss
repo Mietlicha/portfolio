@@ -84,7 +84,7 @@
     }
 
     &::after {
-      content: 'about me';
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -93,5 +93,17 @@
       z-index: -1;
       animation: site-header 2s 0.2s both;
     }
+  }
+
+  &--about::after {
+    content: 'about me';
+  }
+
+  &--contact::after {
+    content: 'Contact';
+  }
+
+  &--projects::after {
+    content: 'projects';
   }
 }

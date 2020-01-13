@@ -31,7 +31,9 @@
     <div class="wrapper">
       <div class="container about-container">
         <header class="site-header">
-          <h1 class="site-header__main"><a href="index.html">About me</a></h1>
+          <h1 class="site-header__main site-header--about">
+            <a href="index.html">About me</a>
+          </h1>
         </header>
         <main class="about-main">
           <div class="about-main__description">
@@ -50,8 +52,17 @@
             </p>
             <p class="about-main__para">
               On daily basis, I use
-              <strong> HTML5, CSS3, Scss, Git, Bootstrap4, Illustrator</strong>
-              and a little bit of <strong>JS</strong>
+              <strong>
+                <abbr title="HyperText Markup Language">HTML</abbr>,
+                <abbr title="Cascading Style Sheets">CSS</abbr>,
+                <abbr title="distributed version-control system">git</abbr>,
+                Bootstrap, Illustrator,
+                <abbr title="Syntactically Awesome Style Sheets"
+                  >Sass</abbr
+                ></strong
+              >
+              and a little bit of
+              <strong><abbr title="Java Script">JS</abbr></strong>
             </p>
             <p class="about-main__para">
               I'm a passionate dreamer and photographer. Whilst not staring at a
@@ -60,8 +71,11 @@
           </div>
         </main>
         <aside class="about-aside">
-          <div class="about-aside__item">
-            <i class="fab fa-html5"></i>
+          <div class="aside">
+            <!-- <div class="about-aside__lebel lebel-1">HTML5</div> -->
+            <div class="about-aside__item item-1">
+              <i class="fab fa-html5"></i>
+            </div>
           </div>
           <div class="about-aside__item"><i class="fab fa-css3-alt"></i></div>
           <div class="about-aside__item"><i class="fab fa-sass"></i></div>
@@ -73,7 +87,9 @@
         </aside>
         <nav class="nav">
           <ul class="nav__list nav-pages">
-            <li class="nav__item pages-item"><a href="#">projects</a></li>
+            <li class="nav__item pages-item">
+              <a href="projects.html">projects</a>
+            </li>
             <li class="nav__item pages-item">
               <a href="contact.html">contact</a>
             </li>
