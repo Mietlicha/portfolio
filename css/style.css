@@ -348,6 +348,27 @@ body {
     transition: all 0.4s ease-in-out;
     position: relative; }
 
+.contact-container {
+  grid-template-areas: 'site-header' 'contact-main' 'nav'; }
+  @media only screen and (min-width: 900px) {
+    .contact-container {
+      text-align: left;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: 'site-header site-header' 'nav contact-main'; } }
+
+.contact-main {
+  grid-area: contact-main; }
+  .contact-main__description {
+    padding: 1rem 3.5rem;
+    max-width: 800px; }
+    @media only screen and (min-width: 900px) {
+      .contact-main__description {
+        border-left: 0.3rem solid rgba(233, 252, 242, 0.4);
+        padding: 0 3.5rem 0; } }
+    @media only screen and (min-width: 1500px) {
+      .contact-main__description {
+        padding: 2rem; } }
+
 .home-container {
   grid-template-areas: 'animation' 'header' 'main' 'nav' 'aside'; }
   @media only screen and (min-width: 900px) {
