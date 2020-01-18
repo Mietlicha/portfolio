@@ -54,6 +54,10 @@
     margin-bottom: 2rem;
   }
 
+  &-caption {
+    color: $color-tertiary-light;
+  }
+
   &--item {
     min-width: 140px;
     min-height: 140px;

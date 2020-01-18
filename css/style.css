@@ -46,10 +46,6 @@
   padding: 0;
   box-sizing: inherit; }
 
-*::selection {
-  background: #6c7b95;
-  color: #e9fcf2; }
-
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
@@ -312,7 +308,8 @@ body {
     font-size: 1.2rem;
     line-height: 200%;
     text-align: justify;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: #d0d3d2; }
     @media only screen and (min-width: 900px) {
       .about-main__para {
         font-size: 1rem; } }
@@ -364,7 +361,9 @@ body {
     @media only screen and (min-width: 900px) {
       .contact-main__description {
         border-left: 0.3rem solid rgba(233, 252, 242, 0.4);
-        padding: 0 3.5rem 0; } }
+        padding: 0 3.5rem 0;
+        max-height: 380px;
+        overflow: hidden; } }
     @media only screen and (min-width: 1500px) {
       .contact-main__description {
         padding: 2rem; } }
@@ -431,12 +430,12 @@ body {
           font-size: 4rem; } }
     .header .description__paragraph {
       animation: moveLeft 1s ease-in-out both;
-      font-weight: 100;
       letter-spacing: 5px;
-      font-size: 1.3rem; }
+      font-size: 1.2rem;
+      color: #d0d3d2; }
       @media only screen and (min-width: 900px) {
         .header .description__paragraph {
-          font-size: 1.5rem; } }
+          font-size: 1.3rem; } }
   .header #watch {
     display: none;
     position: fixed;
@@ -536,6 +535,8 @@ aside {
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem; }
+  .work-caption {
+    color: #d0d3d2; }
   .work--item {
     min-width: 140px;
     min-height: 140px;
