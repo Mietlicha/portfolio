@@ -13,4 +13,11 @@
   &__paragraph {
     opacity: 0.3;
   }
+
+  //to move footer to the bottom of a page in tablet portrait mode
+  @media (orientation: portrait) and (min-width: 700px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
