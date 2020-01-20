@@ -354,16 +354,16 @@ body {
       grid-template-areas: 'site-header site-header' 'nav contact-main'; } }
 
 .contact-main {
-  grid-area: contact-main; }
+  grid-area: contact-main;
+  margin-bottom: 3rem; }
   .contact-main__description {
     padding: 1rem 3.5rem;
-    max-width: 800px; }
+    max-width: 800px;
+    overflow-x: hidden; }
     @media only screen and (min-width: 900px) {
       .contact-main__description {
         border-left: 0.3rem solid rgba(233, 252, 242, 0.4);
-        padding: 0 3.5rem 0;
-        max-height: 380px;
-        overflow: hidden; } }
+        padding: 0 3.5rem 0; } }
     @media only screen and (min-width: 1500px) {
       .contact-main__description {
         padding: 2rem; } }
