@@ -54,3 +54,12 @@
     opacity: 0;
   }
 }
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

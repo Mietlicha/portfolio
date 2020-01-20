@@ -33,9 +33,9 @@ html {
   }
 
   //to avoid white-space in tablet portrait mode
-  @media (orientation: portrait) and (min-width: 700px) {
-    height: 100%;
-  }
+  // @media (orientation: portrait) and (min-width: 700px) {
+  //   height: 100%;
+  // }
 }
 
 body {
