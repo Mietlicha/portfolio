@@ -212,6 +212,9 @@ body {
 
 .nav {
   grid-area: nav; }
+  @media only screen and (min-width: 900px) {
+    .nav {
+      border-right: 0.3rem solid rgba(233, 252, 242, 0.4); } }
   .nav__list {
     list-style: none;
     margin: 0;
@@ -303,7 +306,6 @@ body {
     padding: 1rem 3.5rem; }
     @media only screen and (min-width: 900px) {
       .about-main__description {
-        border-left: 0.3rem solid rgba(233, 252, 242, 0.4);
         padding: 0 3.5rem 0; } }
     @media only screen and (min-width: 1500px) {
       .about-main__description {
@@ -374,10 +376,10 @@ body {
   .contact-main__description {
     padding: 1rem 3.5rem;
     max-width: 800px;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    min-height: 425px; }
     @media only screen and (min-width: 900px) {
       .contact-main__description {
-        border-left: 0.3rem solid rgba(233, 252, 242, 0.4);
         padding: 0 3.5rem 0; } }
     @media only screen and (min-width: 1500px) {
       .contact-main__description {
@@ -524,12 +526,11 @@ aside {
   grid-area: project-main; }
   .project-main__description {
     padding: 1rem 3.5rem;
-    max-width: 700px;
     margin: 0 auto;
-    min-width: 538px; }
+    height: 500px;
+    overflow-y: auto; }
     @media only screen and (min-width: 900px) {
       .project-main__description {
-        border-left: 0.3rem solid rgba(233, 252, 242, 0.4);
         margin: 0; } }
     @media only screen and (min-width: 1500px) {
       .project-main__description {

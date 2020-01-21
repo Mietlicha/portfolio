@@ -1,6 +1,10 @@
 .nav {
   grid-area: nav;
 
+  @include respond(tab) {
+    border-right: 0.3rem solid rgba($color-secondary-light, 0.4);
+  }
+
   &__list {
     list-style: none;
     margin: 0;

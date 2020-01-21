@@ -21,9 +21,9 @@
     padding: 1rem 3.5rem;
     max-width: 800px;
     overflow-x: hidden;
+    min-height: 425px;
 
     @include respond(tab) {
-      border-left: 0.3rem solid rgba($color-secondary-light, 0.4);
       padding: 0 3.5rem 0;
     }
 
