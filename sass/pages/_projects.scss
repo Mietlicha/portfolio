@@ -17,13 +17,13 @@
   grid-area: project-main;
 
   &__description {
-    padding: 1rem 3.5rem;
-    // max-width: 800px;
+    padding: 1rem 0 6rem 1.5rem;
     margin: 0 auto;
-    height: 500px;
     overflow-y: auto;
+    text-align: left;
 
     @include respond(tab) {
+      padding: 0 3.5rem;
       margin: 0;
     }
 
@@ -48,18 +48,44 @@
   }
 
   &__wrapper {
-    display: flex;
-    height: 100%;
+    // display: flex;
     padding: 0 20px;
-    line-height: 1.5;
     margin-top: 1rem;
+    position: relative;
   }
 
   &__img {
-    max-width: 200px;
+    max-width: 120px;
     width: 100%;
     margin-left: 1rem;
-    margin-top: -7rem;
+    transform: translateY(-4rem);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include respond(tab) {
+      max-width: 150px;
+      transform: translateY(-6rem);
+    }
+
+    @include respond(huge) {
+      max-width: 200px;
+    }
+  }
+
+  &-text {
+    width: 65%;
+    min-height: 180px;
+
+    @include respond(tab) {
+      width: 80%;
+      min-height: 170px;
+    }
+
+    @include respond(huge) {
+      width: 75%;
+      min-height: 250px;
+    }
   }
 
   &-text__head {
@@ -85,7 +111,7 @@
 
   &__para {
     color: $color-tertiary-light;
-    line-height: 200%;
+    line-height: 180%;
     text-align: justify;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
@@ -102,7 +128,7 @@
   }
 
   .summary:not(.first) {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 
   .details-text {

@@ -525,12 +525,13 @@ aside {
 .project-main {
   grid-area: project-main; }
   .project-main__description {
-    padding: 1rem 3.5rem;
+    padding: 1rem 0 6rem 1.5rem;
     margin: 0 auto;
-    height: 500px;
-    overflow-y: auto; }
+    overflow-y: auto;
+    text-align: left; }
     @media only screen and (min-width: 900px) {
       .project-main__description {
+        padding: 0 3.5rem;
         margin: 0; } }
     @media only screen and (min-width: 1500px) {
       .project-main__description {
@@ -547,17 +548,37 @@ aside {
     outline: none; }
 
 .details__wrapper {
-  display: flex;
-  height: 100%;
   padding: 0 20px;
-  line-height: 1.5;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  position: relative; }
 
 .details__img {
-  max-width: 200px;
+  max-width: 120px;
   width: 100%;
   margin-left: 1rem;
-  margin-top: -7rem; }
+  transform: translateY(-4rem);
+  position: absolute;
+  right: 0;
+  top: 0; }
+  @media only screen and (min-width: 900px) {
+    .details__img {
+      max-width: 150px;
+      transform: translateY(-6rem); } }
+  @media only screen and (min-width: 1500px) {
+    .details__img {
+      max-width: 200px; } }
+
+.details-text {
+  width: 65%;
+  min-height: 180px; }
+  @media only screen and (min-width: 900px) {
+    .details-text {
+      width: 80%;
+      min-height: 170px; } }
+  @media only screen and (min-width: 1500px) {
+    .details-text {
+      width: 75%;
+      min-height: 250px; } }
 
 .details-text__head {
   font-weight: 300; }
@@ -579,7 +600,7 @@ aside {
 
 .details__para {
   color: #d0d3d2;
-  line-height: 200%;
+  line-height: 180%;
   text-align: justify;
   margin-top: 1rem;
   margin-bottom: 0.5rem; }
@@ -590,7 +611,7 @@ aside {
     outline: none; }
 
 .details[open] .summary:not(.first) {
-  margin-top: 3rem; }
+  margin-top: 2.5rem; }
 
 .details[open] .details-text {
   opacity: 0;
