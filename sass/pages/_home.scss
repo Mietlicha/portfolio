@@ -81,6 +81,10 @@
       animation: moveRight 1s ease-in-out both;
       color: $color-secondary-dark;
 
+      @include respond(phone) {
+        font-size: 5rem;
+      }
+
       @include respond(tab) {
         font-size: 4rem;
       }
@@ -92,8 +96,14 @@
       font-size: 1.2rem;
       color: $color-tertiary-light;
 
+      @include respond(phone) {
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
+
       @include respond(tab) {
         font-size: 1.3rem;
+        padding-top: 0;
       }
     }
   }
@@ -121,6 +131,10 @@
   padding: 3rem;
   font-size: 2rem;
 
+  @include respond(phone) {
+    padding-bottom: 6rem;
+  }
+
   @include respond(tab) {
     padding: 1rem;
     font-size: 1.2rem;
@@ -137,7 +151,7 @@ aside {
 
   @include respond(tab) {
     width: 55%;
-    margin: 0 AUTO;
+    margin: 0 auto;
   }
 
   .socials {
@@ -171,6 +185,14 @@ aside {
           color: $color-secondary-dark;
           background: transparent;
         }
+      }
+
+      @include respond(phone) {
+        padding: 3.5rem 1rem;
+      }
+
+      @include respond(tab) {
+        padding: 2.5rem 1rem;
       }
     }
   }

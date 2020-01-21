@@ -119,6 +119,12 @@ body {
   padding: 1.5rem 2rem; }
   .footer__paragraph {
     opacity: 0.3; }
+  @media only screen and (min-width: 600px) {
+    .footer {
+      padding: 3rem; } }
+  @media only screen and (min-width: 900px) {
+    .footer {
+      padding: 1.5rem 2rem; } }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
@@ -217,11 +223,15 @@ body {
     text-transform: uppercase;
     font-size: 1.7rem;
     transition: all 0.3s ease-in-out; }
+    @media only screen and (min-width: 600px) {
+      .nav__item {
+        font-size: 2rem; } }
     @media only screen and (min-width: 900px) {
       .nav__item {
         background: transparent;
         margin: 0 auto;
-        width: 60%; } }
+        width: 60%;
+        font-size: 1.7rem; } }
     .nav__item a {
       text-decoration: none;
       color: #e9fcf2;
@@ -230,6 +240,9 @@ body {
       display: block;
       width: 100%;
       padding: 2.7rem; }
+      @media only screen and (min-width: 600px) {
+        .nav__item a {
+          padding: 3.2rem; } }
       @media only screen and (min-width: 900px) {
         .nav__item a {
           padding: 1rem 2.7rem; } }
@@ -295,6 +308,9 @@ body {
   grid-area: about-main; }
   .about-main__description {
     padding: 1rem 3.5rem; }
+    @media only screen and (min-width: 600px) {
+      .about-main__description {
+        padding: 3.5rem 9rem; } }
     @media only screen and (min-width: 900px) {
       .about-main__description {
         padding: 0 3.5rem 0; } }
@@ -318,6 +334,10 @@ body {
     text-align: justify;
     margin-bottom: 1rem;
     color: #d0d3d2; }
+    @media only screen and (min-width: 600px) {
+      .about-main__para {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem; } }
     @media only screen and (min-width: 900px) {
       .about-main__para {
         font-size: 1rem; } }
@@ -332,6 +352,9 @@ body {
   align-items: center;
   width: 100%;
   padding: 1rem 3.5rem 3.5rem 3.5rem; }
+  @media only screen and (min-width: 600px) {
+    .about-aside {
+      padding: 5rem; } }
   @media only screen and (min-width: 900px) {
     .about-aside {
       padding: 0.5rem 3rem; } }
@@ -369,6 +392,9 @@ body {
     max-width: 800px;
     overflow-x: hidden;
     min-height: 425px; }
+    @media only screen and (min-width: 600px) {
+      .contact-main__description {
+        padding: 9.8rem; } }
     @media only screen and (min-width: 900px) {
       .contact-main__description {
         padding: 0 3.5rem 0; } }
@@ -436,6 +462,9 @@ body {
       text-transform: uppercase;
       animation: moveRight 1s ease-in-out both;
       color: #8df1f5; }
+      @media only screen and (min-width: 600px) {
+        .header .description__main {
+          font-size: 5rem; } }
       @media only screen and (min-width: 900px) {
         .header .description__main {
           font-size: 4rem; } }
@@ -444,9 +473,14 @@ body {
       letter-spacing: 5px;
       font-size: 1.2rem;
       color: #d0d3d2; }
+      @media only screen and (min-width: 600px) {
+        .header .description__paragraph {
+          font-size: 2rem;
+          padding-top: 2rem; } }
       @media only screen and (min-width: 900px) {
         .header .description__paragraph {
-          font-size: 1.3rem; } }
+          font-size: 1.3rem;
+          padding-top: 0; } }
   .header #watch {
     display: none;
     position: fixed;
@@ -465,6 +499,9 @@ body {
   grid-area: main;
   padding: 3rem;
   font-size: 2rem; }
+  @media only screen and (min-width: 600px) {
+    .projects {
+      padding-bottom: 6rem; } }
   @media only screen and (min-width: 900px) {
     .projects {
       padding: 1rem;
@@ -479,7 +516,7 @@ aside {
   @media only screen and (min-width: 900px) {
     aside {
       width: 55%;
-      margin: 0 AUTO; } }
+      margin: 0 auto; } }
   aside .socials {
     background: #464159;
     font-size: 2.3rem;
@@ -507,6 +544,12 @@ aside {
           aside .socials__item:hover {
             color: #8df1f5;
             background: transparent; } }
+      @media only screen and (min-width: 600px) {
+        aside .socials__item {
+          padding: 3.5rem 1rem; } }
+      @media only screen and (min-width: 900px) {
+        aside .socials__item {
+          padding: 2.5rem 1rem; } }
 
 .project-container {
   grid-template-areas: 'site-header' 'project-main' 'nav'; }
@@ -519,10 +562,14 @@ aside {
 .project-main {
   grid-area: project-main; }
   .project-main__description {
-    padding: 1rem 0 6rem 1.5rem;
+    padding: 1rem 0 2rem 1.5rem;
     margin: 0 auto;
     text-align: left;
-    min-height: 500px; }
+    min-height: 450px; }
+    @media only screen and (min-width: 600px) {
+      .project-main__description {
+        padding: 6rem;
+        min-height: 800px; } }
     @media only screen and (min-width: 900px) {
       .project-main__description {
         padding: 0 3.5rem;
@@ -563,11 +610,18 @@ aside {
     .details__img {
       max-width: 150px;
       transform: translateY(-6rem);
-      right: 1rem; } }
+      right: 1rem;
+      position: static;
+      margin-top: 1rem; } }
   @media only screen and (min-width: 900px) {
     .details__img {
       max-width: 150px;
-      right: 0; } }
+      right: 0;
+      transform: translateY(-4rem);
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 0; } }
   @media only screen and (min-width: 1500px) {
     .details__img {
       max-width: 200px; } }
@@ -577,10 +631,11 @@ aside {
   width: 63%; }
   @media only screen and (min-width: 600px) {
     .details-text {
-      width: 75%; } }
+      width: 100%; } }
   @media only screen and (min-width: 900px) {
     .details-text {
-      min-height: 170px; } }
+      min-height: 170px;
+      width: 75%; } }
   @media only screen and (min-width: 1200px) {
     .details-text {
       width: 80%; } }

@@ -13,4 +13,12 @@
   &__paragraph {
     opacity: 0.3;
   }
+
+  @include respond(phone) {
+    padding: 3rem;
+  }
+
+  @include respond(tab) {
+    padding: 1.5rem 2rem;
+  }
 }
