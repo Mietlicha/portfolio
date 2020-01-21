@@ -32,7 +32,7 @@ html {
     font-size: 100%;
   }
 
-  //to avoid white-space in tablet portrait mode
+  // to avoid white-space in tablet portrait mode
   // @media (orientation: portrait) and (min-width: 700px) {
   //   height: 100%;
   // }
@@ -63,10 +63,10 @@ body {
         no-repeat center/cover;
   }
 
-  @media (orientation: portrait) and (min-width: 700px) {
-    display: flex;
-    align-items: center;
-  }
+  // @media (orientation: portrait) and (min-width: 700px) {
+  //   display: flex;
+  //   align-items: center;
+  // }
 }
 
 .wrapper {

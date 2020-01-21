@@ -82,10 +82,6 @@ body {
   @media only screen and (min-width: 1500px) {
     body {
       background: url(../img/1a.png) no-repeat center/cover, url(../img/1.png) no-repeat 110% 50%/contain, linear-gradient(to bottom right, #464159, #6c7b95) no-repeat center/cover; } }
-  @media (orientation: portrait) and (min-width: 700px) {
-    body {
-      display: flex;
-      align-items: center; } }
 
 .wrapper {
   width: 100%;
@@ -123,11 +119,6 @@ body {
   padding: 1.5rem 2rem; }
   .footer__paragraph {
     opacity: 0.3; }
-  @media (orientation: portrait) and (min-width: 700px) {
-    .footer {
-      position: absolute;
-      bottom: 0;
-      left: 0; } }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
@@ -392,6 +383,9 @@ body {
       grid-template-columns: 2fr 2fr;
       grid-template-areas: 'header header' 'main animation' 'nav animation' 'aside animation'; } }
 
+.nav-home {
+  border-right: 0; }
+
 .animation {
   grid-area: animation;
   padding: 6rem; }
@@ -527,7 +521,8 @@ aside {
   .project-main__description {
     padding: 1rem 0 6rem 1.5rem;
     margin: 0 auto;
-    text-align: left; }
+    text-align: left;
+    min-height: 500px; }
     @media only screen and (min-width: 900px) {
       .project-main__description {
         padding: 0 3.5rem;
