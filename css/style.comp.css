@@ -372,8 +372,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s ease-in-out;
-    position: relative; }
+    transition: all 0.4s ease-in-out; }
+
+svg {
+  width: 60%;
+  height: 60%;
+  fill: #fff; }
+
+#sass,
+#figma,
+#bootstrap {
+  width: 80%;
+  height: 80%; }
 
 .contact-container {
   grid-template-areas: 'site-header' 'contact-main' 'nav'; }
